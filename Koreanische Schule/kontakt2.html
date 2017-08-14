@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/korea.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img id="logo1" class="img" src="css/img/uebung.png" alt="log">
+        </div>
+        <div id="logo2" class="col-md-6 text-center">
+            <img class="img" src="css/img/uebung1.png" alt="koreanische schule bremen">
+        </div>
+        <div class="col-md-1 text-right">
+            <a href="index.html"><img class="flagge" src="css/img/Germany.png" alt="deutsche flagge"></a>
+            <a href="startseite_ko.html"><img class="flagge" src="css/img/South_Korea.png" alt="koreanische flagge"></a>
+        </div>
+        <div class="col-md-1 ">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 border">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Startseite</a></li>
+            <li><a href="wir_ueber_uns.html">Wir über uns</a></li>
+            <li><a href="kurse.html">Kurse</a></li>
+            <li><a href="termine.html">Termine</a></li>
+            <!--<li><a href="berichte.html">Berichte</a></li>-->
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class ="col-md-2">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-2 sidenav">
+            <p><a href="#">&nbsp;</a></p>
+            <p><a href="#">&nbsp;</a></p>
+            <p><a href="#">&nbsp;</a></p>
+        </div>
+        <div class="col-md-6">
+            <div class="inside">
+                <div id="anfahrt">
+                    <h1>Ihr Weg zu uns</h1>
+                    <p>Koreanische Schule Bremen e.V.</p>
+                    <p>zur Zeit haben wir den Unterricht in der <b>Schule an der Stichnathstrasse</b></p>
+                    <p></p>
+                    <p>Max-Jan-Weg 13</p>
+                    <p>28277 Bremen</p>
+                    <p></p>
+                    <p></p>
+
+                </div>
+                <div id="map">
+                    <script>
+      function initMap() {
+        var uluru = {lat: 53.037747, lng: 8.827539};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+                    <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYiAPVM8_FLDUSw0Y99WhbYXnaJvjCxpY&callback=initMap">
+                    </script>
+
+                </div>
+                <div id="klaerung">
+                    <p>die öffentlichen Verkehrsmittel</p>
+                    <p>
+                        <span class="anfahrt"><b>BS</b>AG Fahrplanauskunft   −></span>
+                        <a href ="https://fahrplaner.bsag.de/hafas/query.exe/dn?" title="BSAG" target="blank"><img src="https://www.bsag.de/fileadmin/mobil-2017/public/images/Logo/bsag-logo.png" alt="mit dem BSAG" width="100" height="33"></a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 sidenav">
+            <p><a href="#">&nbsp;</a></p>
+            <p><a href="#">&nbsp;</a></p>
+            <p><a href="#">&nbsp;</a></p>
+        </div>
+        <div class="col-sm-8 kontakt">
+            <h1>Kontaktformular</h1>
+            <p>Vielen Dank für Ihre Anfrage</p>
+            <?php
+            $message  = "Name: ";
+            $message .= $_POST['name'];
+            $message .= "Email: ";
+            $message .= $_POST['email'];
+            $message .= "Nachricht: ";
+            $message .= $_POST['textarea'];
+            $message .= "\n";
+            $mailto = "koreanischeschulebremen@gmail.com";
+            $subject = "Kontaktanfrage Koreanisch Bremen";
+            $header = "Content-Disposition: inline\n";
+            $header .= "Content-Transfer-Encoding: 8bit\n";
+            $header .= "Content-Type: text/plain; charset=\"UTF-8\"\n";
+            $header .= "From: info@koreanisch-bremen.de\n";
+            mail($mailto, $subject, $message, $header);
+
+            ?>
+
+                <table>
+                    <tr class="col-1">
+                        <td class="row extention" colspan="2"></td></tr>
+                    <tr class="col-2">
+
+                    </tr>
+                    <tr class="col-3">
+                        <td class="row extention" colspan="2"></td></tr>
+                    <tr class="col-4">
+                       </tr>
+                    <tr class="col-5">
+                        <td class="row extention" colspan="2"></td></tr>
+                    <tr class="col-6">
+                       </tr>
+                    <tr class="col-7">
+                        <td class="row extention" colspan="2"></td></tr>
+                    <tr class="col-8">
+                        </tr>
+                </table>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+    <footer class="container-fluid">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-1 text-right ">
+            <h5><a class="footer" href="satzung.html">Satzung</a></h5>
+        </div>
+        <div class="col-md-1 text-right ">
+            <h5><a class="footer" href="impressum.html">Impressum</a></h5>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
